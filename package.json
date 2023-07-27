@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "start": "strapi start",
+    "develop": "NODE_ENV=development strapi develop",
+    "develop:prod": "NODE_ENV=production strapi develop",
+    "build": "strapi build",
+    "build:prod": "NODE_ENV=production strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.7.1",
+    "@strapi/plugin-sentry": "^4.7.1",
+    "@strapi/plugin-users-permissions": "4.7.1",
+    "@strapi/provider-email-nodemailer": "^4.7.1",
+    "@strapi/provider-email-sendgrid": "^4.7.1",
+    "@strapi/provider-upload-aws-s3": "^4.8.2",
+    "@strapi/strapi": "4.7.1",
+    "@types/lodash": "^4.14.191",
+    "base62": "^2.0.1",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "mysql": "2.18.1",
+    "slug": "^8.2.2",
+    "strapi-plugin-populate-deep": "^2.0.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "cefae735-744a-4da8-a533-7acd4c5c090b"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/slug": "^5.0.3"
+  }
+}

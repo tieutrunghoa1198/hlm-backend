@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "singularName": "store",
+    "pluralName": "stores",
+    "displayName": "Store",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": false,
+      "default": 5
+    },
+    "description": {
+      "type": "string"
+    },
+    "shippers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "store"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "store"
+    },
+    "sets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::set.set",
+      "mappedBy": "store"
+    },
+    "businessType": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::business-type.business-type",
+      "mappedBy": "store"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "store"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "store"
+    },
+    "avatarUrl": {
+      "type": "string"
+    },
+    "avatarId": {
+      "type": "string"
+    }
+  }
+}

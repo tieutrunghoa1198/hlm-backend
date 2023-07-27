@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "set_products",
+  "info": {
+    "singularName": "set-product",
+    "pluralName": "set-products",
+    "displayName": "Set_Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "set_products"
+    },
+    "unitPrice": {
+      "type": "float"
+    },
+    "set": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::set.set",
+      "inversedBy": "productList"
+    }
+  }
+}
